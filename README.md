@@ -1,39 +1,34 @@
 # 图像修复
 
 #### 介绍
-{**以下是码云平台说明，您可以替换此简介**
-码云是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+使用mxnet编写的图像编解码器，用于图像修复
 
-#### 软件架构
-软件架构说明
+我使用的数据集是巴黎街景数据集
+
+#### 参考来源
+https://blog.csdn.net/qq_39938666/article/details/88363042
+
+这位作者使用的是pytorch实现的
+因为keras自定义padding大小操作比较麻烦
+所以我选择了mxnet进行实现
+
+#### 目录分支
+train文件夹下有两个目录
+true是放入原始图片
+masked是放入缺失图片
+
+decoded目录是为了可视化我们的修复结果
+在一定迭代下，会生成原图，以及解码出来的图片
+
+ae_params目录是为了保存模型的参数
+方便继续训练
+
+#### 注意事项
+里面我对图像的标准化参考自Imagenet的数值
+因此恢复出来的图像颜色存在一定差别
+
+如有需要可以自行修改
 
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
 
 
-#### 码云特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
